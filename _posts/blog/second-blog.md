@@ -8,4 +8,4 @@ featured: false
 ---
 # Second blog
 
-Just to be double sure
+Just to be double sure. Hehe
