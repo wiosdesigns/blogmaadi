@@ -6,8 +6,6 @@ tags:
   - first
   - blog
 ---
-
-
 \# Welcome to the first blog
 
 \## Test drive
@@ -30,3 +28,9 @@ Unordered List
 > This is a quote apparently
 
 ![Sample image](/media/uploads/bg.jpg "Wokay")
+
+## Embedded video:
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+
+</iframe>
