@@ -1,5 +1,5 @@
 ---
-title: Index
+title: First blog
 date: 2019-09-23T05:45:15.727Z
 thumbnail: /media/uploads/contact.jpg
 tags:
@@ -32,6 +32,6 @@ Unordered List
 
 ## Embedded video:
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
 </iframe>
