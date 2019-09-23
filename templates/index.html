@@ -77,46 +77,27 @@
 <section style="background: var(--light); color: var(--dark); text-align: left; padding: 3mm; background-size: contain; background-position: center center;">
   <h2>Browse by Tags</h2>
   <p class="tags">
-    
-    <a href="/tag/wokay.html">wokay</a>
-    
-    <a href="/tag/first.html">first</a>
-    
-    <a href="/tag/blog.html">blog</a>
-    
+    {% for tag in tags %}
+    <a href="/tag/{{tag}}.html">{{tag}}</a>
+    {% endfor %}
   </p>
   <br><br>
   
   <h2>Featured blogs</h2>
-  
-  <a href="/post/second-blog.html" class="blogsnip">
-    <span style="background: url('/media/uploads/bg.jpg')">
+  {% for blog in blogs %}
+  <a href="{{blog.link}}" class="blogsnip">
+    <span style="background: url('{{blog.thumbnail}}')">
       <br><br>
     </span>
-    <h2>Second blog</h2>
-    <p>23 September, 2019</p>
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.date}}</p>
     <p>
-      
-      <span>wokay</span>
-      
+      {% for tag in blog.tags %}
+      <span>{{tag}}</span>
+      {% endfor %}
     </p>
   </a>
-  
-  <a href="/post/first-blog.html" class="blogsnip">
-    <span style="background: url('/media/uploads/contact.jpg')">
-      <br><br>
-    </span>
-    <h2>First blog</h2>
-    <p>23 September, 2019</p>
-    <p>
-      
-      <span>first</span>
-      
-      <span>blog</span>
-      
-    </p>
-  </a>
-  
+  {% endfor%}
   
 </section>
 <br>

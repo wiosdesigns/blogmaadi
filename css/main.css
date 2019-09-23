@@ -1,0 +1,109 @@
+:root{
+  --darker: #00060a;
+  --dark: #080C0F;
+  --theme: #0060a0;
+  --light: #e5f4ff;
+  --lighter: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: font1;
+  src: url(/media/jost.otf);
+}
+@font-face {
+  font-family: font2;
+  src: url(/media/mr.ttf);
+}
+body {
+  font-family: font1;
+  padding: 0px;
+  margin: 0px;
+  font-size: 4mm;
+  background: var(--light);
+  color: var(--darker);
+  text-align: center;
+}
+header{
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-row-gap: 2mm;
+  background: var(--darker);
+  top: 0;
+  width: 100%;
+  padding: 2mm;
+  text-align: left;
+}
+header>a>img{
+  height: 8mm;
+  width: auto;
+}
+header>input{
+  display: none;
+}
+header>label{
+  display: inline-block;
+  height: 6mm;
+  width: 8mm;
+  margin: 1.5mm;
+  background: url(/media/menuoff.svg);
+  background-size: contain;
+}
+header input:checked ~ label{
+  background: url(/media/menuon.svg);
+  background-size: contain;
+}
+header>nav{
+  display: none;
+  text-align: right;
+  grid-column: span 2;
+}
+header>nav>a{
+  color: var(--lighter);
+  font-size: 5mm;
+  display: inline-block;
+  padding: 2mm;
+  text-decoration: none;
+}
+header input:checked ~ nav{
+  display: inline-block;
+  border-radius: 1mm;
+  animation: fadein 0.3s ease-out forwards;
+}
+
+@media only screen and (max-width: 200mm) {
+  header>nav>a{
+    display: block;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 200mm) {
+  header>input,header>label{
+    display: none;
+  }
+  header>nav{
+    display: inline-block;
+    grid-column: span 1;
+  }
+  header>nav>a{
+    padding: 1mm 6mm;
+  }
+}
+
+@keyframes fadein{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+h1,h2,h3{
+  font-weight: normal;
+}
+section{
+  display: inline-block;
+  width: 100%;
+  max-width: 200mm;
+}
+
+

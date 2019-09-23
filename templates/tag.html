@@ -6,9 +6,6 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" type="image/png" href="/media/icon.png"/>
   <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-  <!--
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  -->
   <style>
     a.blogsnip{
       display: grid;
@@ -35,7 +32,7 @@
       padding: 0mm 2mm 4mm 2mm;
       color: var(--dark);
     }
-    a.blogsnip p>span,.tags a{
+    a.blogsnip p>span{
       display: inline-block;
       background: var(--theme);
       padding: 0.5mm 3mm;
@@ -69,69 +66,32 @@
 </header>
 <br><br>
 <section style="max-width: 100%; width: 100%;background: var(--dark); color: var(--lighter); text-align: center; padding-bottom: 10mm; border-radius: 0 0 50% 50%;">
-  <h1>BlogMaadi</h1>
-  <h3>A blog template for Netlify CMS</h3>
+  <h3>Browse by Tag</h3>
+  <h1>{{tag}}</h1>
 </section>
 <br>
 <br>
 <section style="background: var(--light); color: var(--dark); text-align: left; padding: 3mm; background-size: contain; background-position: center center;">
-  <h2>Browse by Tags</h2>
-  <p class="tags">
-    
-    <a href="/tag/wokay.html">wokay</a>
-    
-    <a href="/tag/first.html">first</a>
-    
-    <a href="/tag/blog.html">blog</a>
-    
-  </p>
-  <br><br>
   
-  <h2>Featured blogs</h2>
-  
-  <a href="/post/second-blog.html" class="blogsnip">
-    <span style="background: url('/media/uploads/bg.jpg')">
+  {% for blog in blogs %}
+  {% if tag in blog.tags %}
+  <a href="{{blog.link}}" class="blogsnip">
+    <span style="background: url('{{blog.thumbnail}}')">
       <br><br>
     </span>
-    <h2>Second blog</h2>
-    <p>23 September, 2019</p>
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.date}}</p>
     <p>
-      
-      <span>wokay</span>
-      
+      {% for tag in blog.tags %}
+      <span>{{tag}}</span>
+      {% endfor %}
     </p>
   </a>
-  
-  <a href="/post/first-blog.html" class="blogsnip">
-    <span style="background: url('/media/uploads/contact.jpg')">
-      <br><br>
-    </span>
-    <h2>First blog</h2>
-    <p>23 September, 2019</p>
-    <p>
-      
-      <span>first</span>
-      
-      <span>blog</span>
-      
-    </p>
-  </a>
-  
+  {% endif %}
+  {% endfor%}
   
 </section>
 <br>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-
 <p style="margin: 0; background: var(--darker); text-align: center; padding: 5mm; color: var(--lighter);">
   Powered by <a style="color: var(--lighter);" href="https://wiosdesigns.xyz" target="_blank">WIOS Designs</a>
 </p>
