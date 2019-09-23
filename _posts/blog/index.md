@@ -5,6 +5,7 @@ thumbnail: /media/uploads/contact.jpg
 tags:
   - first
   - blog
+featured: true
 ---
 \# Welcome to the first blog
 
