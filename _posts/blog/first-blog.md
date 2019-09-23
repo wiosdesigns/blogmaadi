@@ -9,7 +9,7 @@ featured: true
 ---
 # Welcome to the first blog
 
-## Test drive
+## Test drive!
 
 This is a paragraph. I'm making it slightly long to go to the next line. The quick brown fox jumps over the lazy dog.
 
@@ -26,7 +26,7 @@ Unordered List
 * Anything
 * Nothing
 
-> This is a quote apparently
+> This is a quote apparently. Yeah
 
 ![Sample image](/media/uploads/bg.jpg "Wokay")
 
