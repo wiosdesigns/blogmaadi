@@ -1,11 +1,12 @@
 ---
 title: First blog
-date: 2019-09-23T05:45:15.727Z
+date: {}
 thumbnail: /media/uploads/contact.jpg
 tags:
   - first
   - blog
 featured: true
+published: true
 ---
 # Welcome to the first blog
 
@@ -26,6 +27,7 @@ Unordered List
 * Anything
 * Nothing
 * Few things
+* One more thing
 
 > This is a quote apparently. Yeah...okay
 
