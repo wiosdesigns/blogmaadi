@@ -1,4 +1,4 @@
-Jinja2==2.10.1
+Jinja2==2.11.3
 mistune==0.8.4
 pyyaml==5.1.2
 awesome-slugify==1.6.5
